@@ -10,11 +10,10 @@ render_views
       response.should be_success
     end
     
-    it	"should have the right title" do
-    
+    it	"should have the right title" do 
     get 'home'
     response.should have_selector("title", :content => "Dennis On Ruby | Home")
-    
+    end
   end
   
   it "should have a non-blank space" do
