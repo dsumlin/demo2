@@ -1,10 +1,10 @@
 Demo2::Application.routes.draw do
-  get "pages#about"
+  Get "pages/about"
 
-  get "pages#home"
+  Get "pages/home"
 
-  get "pages#contact"
-
+  Get "pages/contact"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
