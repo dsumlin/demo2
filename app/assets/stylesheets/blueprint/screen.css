@@ -25,10 +25,10 @@ a img {border:none;}
 :focus {outline:0;}
 
 /* typography.css */
-html {font-size:100.01%;}
-body {font-size:75%;color:green;background:black;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
+html {font-size:100.01%; border-color:green;}
+body {font-size:75%;color:green;background:black;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif; border:5px; border-style:groove; border-color:green;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:white;}
-h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
+h1 {font-size:3em;line-height:1;margin-bottom:0.5em; position:middle;}
 h2 {font-size:2em;margin-bottom:0.75em;}
 h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
 h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
