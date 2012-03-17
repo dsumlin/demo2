@@ -1,8 +1,19 @@
+<table class="profile" summary="Profile Info">
+
+<tr>
+	<td class="main">
 
 <h1>
-
-<%= @user.name %>, <%= @user.email %>
-
+<%= @user.name %>
+<%= gravatar_image_tag @user.email, :class => 'gravatar' %>
 </h1>
+	</td>
+	<td class="sidebar round">
+	<strong>Name</strong> <%= @user.name %><br />
+	<strong>URL</strong> <%= link_to "/users/#{@user.id}" %>
+	</td>
+	</tr>
 
+
+</table>
 
