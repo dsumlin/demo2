@@ -1,5 +1,7 @@
 Demo2::Application.routes.draw do
   
+  get "users/new"
+
     root :to => "pages#home"
 
     
@@ -7,6 +9,8 @@ Demo2::Application.routes.draw do
     match '/about', :to => 'pages#about'
     match '/home', :to => 'pages#home'
     match '/help', :to => 'pages#help'
+    match '/signup', :to => 'users#new'
+
     
 
 
