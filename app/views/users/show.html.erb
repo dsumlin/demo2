@@ -1,1 +1,7 @@
-<%= @user.name %>, <%= @user.email %>
+
+<h1>
+
+<%= gravatar_image_tag @user.email, :class => 'gravatar' %>
+<%= @user.name %>, <%= @user.email %></h1>
+
+
