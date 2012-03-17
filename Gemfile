@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'pg'
 gem 'thin'
 gem 'gravatar'
+gem 'gravatar_image_tag'
 #gem 'factory_girl_rails' 
 #gem 'factory_girl'
 
