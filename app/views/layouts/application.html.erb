@@ -11,13 +11,45 @@
 
 
 <%= csrf_meta_tag %>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 <%= stylesheet_link_tag 'blueprint/testing', :media => 'screen' %>
 <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+<%= stylesheet_link_tag 'custom',  :media => 'screen' %>
 
 </head>
 
 
 <body>
+<div class="container">
+<header>
+<%= image_tag("logo.png", :alt => "dennissumlin.com", :class => ) %> 
+
+<nav class="round">
+
+<ul>
+
+<li><%= link_to "Home", 'home_path' %></li>
+<li><%= link_to "About", 'about_path' %></li>
+<li><%= link_to "Contact", 'contact_path' %></li>
+<li><%= link_to "DENNISSUMLIN.COM", 'http://www.dennissumlin.com' %></li>
+<li><%= link_to "Sign in", '#' %></li>
+
+
+
+
+
+
+</ul>
+
+
+</nav>
+
+</header>
+<section class="round">
 <%= yield %>
+</section>
 </body>
 </html>
