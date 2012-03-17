@@ -20,12 +20,13 @@ padding-top: 20px;
 header img {
 
 padding 1em;
-background: white;
+background: silver;
 
 }
 
 section {
 
+text-align: center;
 margin-top: 1em;
 font-size: 120%;
 padding: 20px;
@@ -36,13 +37,14 @@ background: silver;
 a {
 
 color: #00FF00;
+text-decoration: none; 
 
 }
 
 a:hover {
 
+color: blue;
 
-color: #purple;
 text-decoration: underline;
 
 
@@ -50,6 +52,7 @@ text-decoration: underline;
 
 a:visited {
 
+color: blue;
 
 }
 
@@ -57,9 +60,11 @@ a:visited {
 nav {
 
     float: right; 
-    background: silver;
+    background:black;
     padding: 0 0.7em;
     white-space: nowrap;
+    color: #00FF00;
+
 
 }
 
@@ -88,9 +93,9 @@ nav ul li a {
 
 }
 
-nav {
+nav ul li a:visited {
 
-    color: purple;
+    color: #00FF00;
     
 
 }
