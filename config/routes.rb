@@ -1,9 +1,18 @@
 Demo2::Application.routes.draw do
-  get "pages/about"
+  
+    match '/contact', :to => 'pages#contact'
+    match '/about', :to => 'pages#about'
+    match '/home', :to => 'pages#home'
+    match '/help', :to => 'pages#help'
 
-  get "pages/home"
 
-  get "pages/contact"
+
+   
+  
+    get "pages/home"
+
+  
+    
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

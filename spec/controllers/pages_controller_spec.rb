@@ -51,5 +51,19 @@ render_views
   
     
   end
+    
+    
+    describe "GET 'help'" do
+        it "returns http success" do
+            get 'help'
+            response.should be_success
+        end
+        
+        get 'about'
+        response.should have_selector("title", :content => "#{@base_title} | help")
+        
+        
+    end
 
 end
+
