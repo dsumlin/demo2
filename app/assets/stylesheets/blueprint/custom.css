@@ -158,3 +158,42 @@ float: none;
 
 
 }
+
+table.profile {
+
+width: 100%;
+padding: 1em;
+
+}
+
+td.main {
+
+width: 70%;
+padding: 1em;
+
+}
+
+td.sidebar {
+
+width: 30%
+padding: 1em;
+vertical-align: top;
+background: white;
+
+
+}
+
+.profile img.gravatar {
+
+border: 1px groove #00FF00;
+margin-bottom: -15px;
+
+
+}
+
+
+
+
+
+
+

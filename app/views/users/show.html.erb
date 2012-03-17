@@ -4,8 +4,8 @@
 	<td class="main">
 
 <h1>
+<%= gravatar_for @user, :size => 100 %>
 <%= @user.name %>
-<%= gravatar_image_tag @user.email, :class => 'gravatar' %>
 </h1>
 	</td>
 	<td class="sidebar round">
