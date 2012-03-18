@@ -62,7 +62,7 @@ class User < ActiveRecord::Base
     
     def secure_hash(string)
         
-        Diges::SHA2.hesdigest(string)
+        Digest::SHA2.hexdigest(string)
         
         end
     
