@@ -10,5 +10,13 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         @title = @user.name
     
-    end
+        end
+    
+    def create
+        @user = User.new(params[:user])
+        @user.save
+        @title = "Sign Up"
+        render 'new'
+        end
+    
     end
