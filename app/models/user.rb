@@ -32,21 +32,32 @@ class User < ActiveRecord::Base
      def authenticate(email, submitted_password)
     
        user = find_by_email(email)
-    return nil if user.nil?
-       return user if user.has_password?(submitted_password)
+         (user && user.has_password?(submitted_password)) ? user :nil
+         end
+         
+       
+    def authenticate_with_salt(id, cookie_salt)
+        user = find_by_id(id)
+        (user && user.salt == cookie_salt) ? user : nil
         
-     end
+        end
     end
+    
+#return nil if user.nil?
+#      return user if user.has_password?(submitted_password)
+#       end
+    
+#   end
+
 
         
-    
     
     private
     
         def encrypt_password
             self.salt = make_salt if new_record?
             self.encrypt_password = encrypt(password)
-            end
+        end
     
     def encrypt(string)
         
