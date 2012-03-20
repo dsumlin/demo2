@@ -6,13 +6,14 @@
 <h1>
 <%= gravatar_for @user, :size => 100 %>
 <%= @user.name %>
-<%= @user.email %>
-
+</td>
 </h1>
-	</td>
+	
 	<td class="sidebar round">
-	<strong>Name</strong> <%= @user.name %><br />
-	<strong>URL</strong> <%= link_to "/users/#{@user.id}" %>
+	<strong style="color:white">Name:</strong><br /> <%= @user.name %><br />
+	<strong style="color:white">User Home:</strong> <br /><%= link_to "/users/#{@user.id}" %><br />
+	<strong style="color:white">Email:</strong> <br /><%= @user.email %>
+
 	</td>
 	</tr>
 

@@ -21,16 +21,20 @@ header img {
 
 padding 1em;
 background: silver;
-
+width: 960px;
+height: 100px;
 }
 
 section {
 
 text-align: center;
-margin-top: 1em;
+margin-top: 2em;
 font-size: 120%;
 padding: 20px;
 background: silver;
+border: 1px groove #00FF00;
+
+
 
 }
 
@@ -161,8 +165,10 @@ float: none;
 
 table.profile {
 
-width: 0%;
+width: 100%;
 padding: 1em;
+border: 1px groove red;
+
 
 }
 
@@ -170,6 +176,7 @@ td.main {
 
 width: 70%;
 padding: 1em;
+border: 1px groove #00FF00;
 
 }
 
@@ -178,8 +185,8 @@ td.sidebar {
 width: 30%
 padding: 1em;
 vertical-align: top;
-background: white;
-
+background-color:black;
+color: #00FF00;
 
 }
 
@@ -209,7 +216,7 @@ div.field, div.actions {
 
 .field_with_errors label {
 
-color: white;
+color: red;
 
 }
 
