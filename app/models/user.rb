@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
     
     def has_password?(submitted_password)
         
-        encrypted_password == encrypt(password)
+        encrypted_password == encrypt(submitted_password)
         
        
     end
@@ -32,9 +32,9 @@ class User < ActiveRecord::Base
      def authenticate(email, submitted_password)
     
        user = find_by_email(email)
+         (user && user.has_password?(submitted_password)) ? user :nil
          #return nil if user.nil?
          #return user if user.has_password?(submitted_password)
-         (user && user.has_password?(submitted_password)) ? user :nil
          end
          
        
@@ -51,7 +51,13 @@ class User < ActiveRecord::Base
     
 #   end
 
-
+#def User.authenticate(email, password)
+#   if user = find_by_email(email)
+#       if user.hashed_password == encrypt_password(password, user.salt)
+#           user
+#       end
+#   end
+#end
         
     
     private
