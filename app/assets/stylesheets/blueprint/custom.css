@@ -161,7 +161,7 @@ float: none;
 
 table.profile {
 
-width: 100%;
+width: 0%;
 padding: 1em;
 
 }
@@ -232,7 +232,7 @@ font-weight: bold;
 padding: 5px 5px 5px 15px;
 font-size: 12px;
 margin: -7px;
-background-color: black;
+border-color: red;
 color: #00FF00;
 
 }
