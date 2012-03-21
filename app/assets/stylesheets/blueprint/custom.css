@@ -1,13 +1,13 @@
 .container {
 
 width: 960px;
+
 }
 
 
 body {
 
-	background: black;
-
+	background: white;
 }
 
 
@@ -31,8 +31,9 @@ text-align: center;
 margin-top: 2em;
 font-size: 120%;
 padding: 20px;
-background: silver;
-border: 1px groove #00FF00;
+background: black;
+border: 1px groove white;
+color: white;
 
 
 
@@ -40,6 +41,7 @@ border: 1px groove #00FF00;
 
 section h1 {
 
+color:white;
 font-size: 200%;
 
 }
@@ -70,10 +72,10 @@ color: blue;
 nav {
 
     float: right; 
-    background:black;
+    background: black;
     padding: 0 0.7em;
     white-space: nowrap;
-    color: #00FF00;
+    color: white;
 
 
 }
@@ -105,7 +107,7 @@ nav ul li a {
 
 nav ul li a:visited {
 
-    color: #00FF00;
+    color: white;
     
 
 }
@@ -124,7 +126,7 @@ a.signup_button {
     display: block;
     text-align: center;
     width: 190px;
-    color: #00FF00;
+    color: white;
     background: black;
     font-size: 150%;
     font-weight: bold;
@@ -144,7 +146,6 @@ a.signup_button {
 
 
 .round {
-
     -moz-border-radius:         10px;
     -webkit-border-radius:      10px;
     border-radius:              10px;
@@ -179,6 +180,7 @@ padding: 1em;
 border: 1px groove red;
 
 
+
 }
 
 td.main {
@@ -186,6 +188,7 @@ td.main {
 width: 70%;
 padding: 1em;
 border: 1px groove #00FF00;
+color:white;
 
 }
 
