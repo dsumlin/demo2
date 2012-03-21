@@ -1,6 +1,4 @@
-<h1>Edit Your Awesomeness</h1>
-<%= form_for(@user) do |f| %>
-		<%= render 'users/shared/error_messages' %>
+<%= render 'users/shared/error_messages' %>
 
 	
 	<div class="field">
@@ -21,19 +19,3 @@
 	</div>	
 	<div class="field">
 	</div>
-	
-	<div class="actions">
-		<%= f.submit "Update Awesomeness", :class => "signup_button2 round" %>
-	</div>	
-
-<div>
-
-<%= gravatar_for @user %>
-	<a href=http://gravatar.com/emails" target=_blank>change me</a>
-
-</div>
-
-		
-	
-
-<% end %>

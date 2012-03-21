@@ -4,7 +4,6 @@ class UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
         @title = @user.name
-        @current_user = User.find(params[:id])
 
     end
     
@@ -18,7 +17,6 @@ class UsersController < ApplicationController
     
     
     def create
-        #raise params[:user].inspect
         @user = User.new(params[:user])
         if @user.save
             sign_in @user
