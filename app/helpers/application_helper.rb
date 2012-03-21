@@ -1,6 +1,5 @@
 module ApplicationHelper
 
-#Return a title
 
 
     def title 

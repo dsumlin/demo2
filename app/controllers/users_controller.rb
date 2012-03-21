@@ -4,7 +4,8 @@ class UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
         @title = @user.name
-        
+        @current_user = User.find(params[:id])
+
     end
     
     
@@ -28,5 +29,12 @@ class UsersController < ApplicationController
            end
         end
     
+    
+    def edit
+        
+        @user = User.find(params[:id])
+        @title = "Edit user"
+        
+        end
             
 end
