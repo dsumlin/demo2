@@ -32,6 +32,12 @@ module SessionsHelper
         
         end
     
+    def deny_access
+        
+        redirect_to signin_path, :notice => "Sign in to see your awesomeness!" 
+        
+    end
+    
     private
     
     def user_from_remember_token

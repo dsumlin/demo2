@@ -41,21 +41,21 @@ color: white;
 
 section h1 {
 
-color:white;
+color:#CC9966;
 font-size: 200%;
 
 }
 
 a {
 
-color: #00FF00;
+color: #CC9966;
 text-decoration: none; 
 
 }
 
 a:hover {
 
-color: blue;
+color: #CC9966;
 
 text-decoration: underline;
 
@@ -115,6 +115,9 @@ nav ul li a:visited {
 nav ul li a:hover {
 
     text-decoration: underline;
+    color:#CC9966;
+    font-family: cursive;
+
 
 }
 
@@ -139,7 +142,7 @@ a.signup_button {
 .signup_button2 {
 
     background: black;
-    color: #00FF00;
+    color: #CC9966;
 
 
 }
@@ -177,7 +180,8 @@ table.profile {
 
 width: 100%;
 padding: 1em;
-border: 1px groove red;
+border: 1px groove #CC9966;
+background: black;
 
 
 
@@ -187,8 +191,10 @@ td.main {
 
 width: 70%;
 padding: 1em;
-border: 1px groove #00FF00;
 color:white;
+border: 1px groove white;
+background: black;
+
 
 }
 
@@ -198,13 +204,13 @@ width: 30%
 padding: 1em;
 vertical-align: top;
 background-color:black;
-color: #00FF00;
+color: white;
 
 }
 
 .profile img.gravatar {
 
-border: 1px groove #00FF00;
+border: 1px groove #CC9966;
 margin-bottom: -15px;
 
 
