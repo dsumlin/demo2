@@ -56,7 +56,7 @@ module SessionsHelper
     
     def clear_return_to
         
-        session[return_to] = nil
+        session[:return_to] = nil
         
         end
     
