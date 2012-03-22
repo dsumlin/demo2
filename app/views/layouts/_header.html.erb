@@ -11,16 +11,10 @@
 <li><%= link_to "Contact", contact_path %></li>
 		<% if signed_in? %>
 		<li><%= link_to "Profile", user_path(current_user)  %></li>
-
-				
-
-		
+		<li><%= link_to "Members", users_path  %></li>
 <% else %>
 <li><%= link_to "Sign in", signin_path %></li>
-
-
 <% end %>
-
 <li><%= link_to "Help", '/help' %></li>
 <li><%= link_to "DENNISSUMLIN.COM", 'http://www.dennissumlin.com' %></li>
 <% if signed_in? %>
