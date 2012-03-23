@@ -1,6 +1,6 @@
 <h1>Awesome Members</h1>
 
-<%= will_paginate %>
+<%= will_paginate @posts %>
 
 <ul class="users">
 	<% @users.each do |user| %>
@@ -8,10 +8,15 @@
 	<li>
 			<%= gravatar_for user, :size => 30 %>
 			<%= link_to user.name, user %>
+			<% if current_user.admin? %>
+			|
+			<%= link_to "delete", user, :method => :delete, :confirm => "Positive?!?!?",
+										:title => "Delete #{user.name}" %>
+										<% end %>
     </li>
 	
 	
 	<% end %>
 </ul>
 
-<%= will_paginate %>
+<%= will_paginate @posts%>
