@@ -181,7 +181,7 @@ table.profile {
 width: 100%;
 padding: 1em;
 border: 1px groove #CC9966;
-background: black;
+background: white;
 
 
 
@@ -205,6 +205,8 @@ padding: 1em;
 vertical-align: top;
 background-color:black;
 color: white;
+border: 1px groove #CC9966;
+
 
 }
 
@@ -215,6 +217,17 @@ margin-bottom: -15px;
 
 
 }
+
+
+.profile img.gravatar {
+
+border: 1px groove #CC9966;
+margin-bottom: -15px;
+
+
+}
+
+
 
 div.field, div.actions {
 

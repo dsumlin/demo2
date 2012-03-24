@@ -28,6 +28,11 @@ class User < ActiveRecord::Base
        
     end
     
+    def feed 
+        
+
+        Microposts.where("user_id =?", id)
+        end
     
        class << self 
     

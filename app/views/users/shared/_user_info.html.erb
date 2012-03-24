@@ -1,16 +1,13 @@
 <div class="user_info">
 
-	<a herf="<%= user_path(current_user) %>">
-	<% gravatar_for current_user, :size => 25 %>
+	<a href="<%= user_path(current_user) %>" >
+	<%= gravatar_for current_user, :size => 70 %>
 	<span class="user_name">
 	<%= current_user.name %>
 	</span>
-	
-	<span>
-	
 	<span class="microposts">
 	
-	<%= pluralize(current_user.microposts.count, "microposts") %>
+	<%= pluralize(current_user.microposts.count, "Comments") %>
 	
 	</span>
 	
