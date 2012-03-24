@@ -333,6 +333,9 @@ table.microposts tr td.micropost {
 border-top: 1px solid #CC9966;
 vertical-align: top;
 padding-top: 10px;
+background:black;
+border-top: 1px solid #CC9966;
+
 
 
 
@@ -343,6 +346,7 @@ table.microposts tr td.micropost span.timestamp {
 display: block;
 font-size: 85%;
 color: #CC9966;
+background:black;
 
 
 }
@@ -377,6 +381,7 @@ font-size: 80%;
 form.new_micropost {
 
 margin-bottom: 2em;
+border: 1px groove #CC9966;
 
 }
 
