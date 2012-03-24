@@ -1,24 +1,26 @@
-<!DOCTYPE html>
+<% if signed_in? %>
 
-<html>
+<table class="front" summary="Signed in members">
 
-<head>
+	<tr>
+	
+	 <td class="main">
+	 	<h1 class="micropost">Going On?</h1>
+	 	<%= render 'users/shared/micropost_form' %>
+	 </td>
+	<td class="sidebar round">
+		<%= render 'users/shared/user_info' %>
+	</td>
+	
+	</tr>
 
-<title>
 
+</table>
 
-
-</title>
-
-</head>
-
-
-<body>
-
+<% else %>
 <h1>My Ruby Home Page</h1>
 <p>Welcome To Dennis On Ruby On Rails</p>
 <%= link_to "Become a member now!", 'signup', :class => "signup_button round" %>
 
 
-</body>
-</html>
+<% end %>

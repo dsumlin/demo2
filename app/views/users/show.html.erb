@@ -1,3 +1,5 @@
+
+
 <table class="profile" summary="Profile Info">
 
 <tr>
@@ -8,11 +10,16 @@
 <%= @user.name %>
 </td>
 </h1>
+	<% if @user.microposts.any? %>
+	<table class="microposts" summary="User micropost">
+
+	</table>
 	
+	<% end %>
 	<td class="sidebar round">
 	<strong style="color:white">Name:</strong><br /> <%= @user.name %><br />
-	<strong style="color:white">User Home:</strong> <br /><%= link_to "/users/#{@user.id}" %><br />
-	<strong style="color:white">Email:</strong> <br /><%= @user.email %>
+	<strong style="color:white">Email:</strong> <br /><%= @user.email %><br />
+	<strong style="color:white">Comments:</strong> <br /><%= @user.microposts.count %>
 
 	</td>
 	</tr>
