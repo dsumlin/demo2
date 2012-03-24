@@ -10,9 +10,13 @@
 <%= @user.name %>
 </td>
 </h1>
+
 	<% if @user.microposts.any? %>
 	<table class="microposts" summary="User micropost">
 
+<%= will_paginate @microposts %>
+
+<%= render @microposts %>
 	</table>
 	
 	<% end %>

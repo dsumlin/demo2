@@ -302,6 +302,8 @@ margin-bottom: 0.3em
 table.microposts {
 
 margin-top: 1em;
+background:black;
+
 
 
 }
@@ -311,6 +313,7 @@ table.microposts tr {
 
 
 height: 70px;
+color: #CC9966;
 
 }
 
@@ -378,7 +381,7 @@ margin-bottom: 2em;
 }
 
 form.new_micropost textarea {
-
+border: 1px solid #CC9966;
 height: 4em;
 margin-bottom: 0;
 
