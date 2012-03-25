@@ -11,9 +11,10 @@ class User < ActiveRecord::Base
                                    :foreign_key => "followed_id",
                                    :class_name => "Friendship"
     
-    has_many :following,  :through => :friendships, :source => :followed
+    has_many :following,  :through => :friendships,
+                          :source => :followed
     has_many :followers,  :through => :reverse_friendships,
-                            :source =>  :follower 
+                          :source =>  :follower 
     
     email_regex = /[\w+\-.]+@[a-z\d\-.]+\.[a-z]+/i
     
@@ -41,7 +42,6 @@ class User < ActiveRecord::Base
         
        microposts.where("user_id=?", id)
 
-        # Microposts.where("user_id =?", id)
         
     end
     
@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
         end
     def follow!(followed)
         
-        friendships.create!(followed_id => followed.id)
+        friendships.create!(:followed_id => followed.id)
         
         end
     def unfollow!(followed)
