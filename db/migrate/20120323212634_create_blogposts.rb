@@ -7,7 +7,7 @@ class CreateBlogposts < ActiveRecord::Migration
 
       t.timestamps
     end
-      add_index :microposts, :user_id
+      add_index :blogposts, :user_id
   end
     
     def self.down
