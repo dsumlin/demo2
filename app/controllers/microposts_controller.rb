@@ -17,14 +17,17 @@ end
 
 def destroy
 
+    @micropost.destroy
+    redirect_to root_path, :flash => { :success => "Post Gone" }
 
 
     end
     
+    private
     
     
     def authorized_user
-        @micropost = Microposts.find(params[:id])
+        @micropost = Micropost.find(params[:id])
         redirect_to root_path unless current_user?(@micropost.user)
         end
     
