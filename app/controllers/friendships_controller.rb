@@ -14,7 +14,7 @@ end
 def destroy
     
     user = Friendship.find(params[:id]).destroy
-    redirect_to user.followed
+    redirect_to current_user
 end
 
 end

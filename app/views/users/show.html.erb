@@ -10,12 +10,12 @@
 <%= @user.name %>
 </td>
 </h1>
-	<%= render 'follow_form' if signed_in? %>
 	<% if @user.microposts.any? %>
 	<table class="microposts" summary="Member Posts">
 
-<%= will_paginate @microposts %>
-
+<div class="apple_pagination">
+<%= will_paginate @microposts  %>
+</div>
 <%= render @microposts %>
 	</table>
 	

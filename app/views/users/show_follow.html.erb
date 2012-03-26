@@ -2,15 +2,13 @@
 	<tr>
 		<td class="main">
 			<h1><%= @title %></h1>
-			
-			
 			<% if @users.any? %>
 				<ul class="users">
 				 <%= render @users %>
 				 </ul>
 				 <% end %>
 				</td>
-			<td class="sidebar round">
+		<td class="sidebar round">
 	<strong >Name:</strong><br /> <%= @user.name %><br />
 	<strong >Email:</strong> <br /><%= @user.email %><br />
 	<strong >Comments:</strong> <br /><%= @user.microposts.count %>

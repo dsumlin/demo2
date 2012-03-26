@@ -8,6 +8,7 @@ Demo2::Application.routes.draw do
     
     
   get "sessions/new"
+  get "users/new"
 
     resources :users
     resources :sessions,    :only => [:new, :create, :destroy]
@@ -15,8 +16,7 @@ Demo2::Application.routes.draw do
     resources :friendships, :only => [:create, :destroy]
 
     
-  get "users/new"
-
+ 
     root :to => "pages#home"
 
     
