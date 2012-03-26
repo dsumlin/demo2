@@ -1,7 +1,8 @@
 <h1>Awesome Members</h1>
 
+<div class="apple_pagination">
 <%= will_paginate @user %>
-
+</div>
 <ul class="users">
 	<% @users.each do |user| %>
 	
@@ -18,5 +19,6 @@
 	
 	<% end %>
 </ul>
-
+<div class="apple_pagination">
 <%= will_paginate @user%>
+</div>

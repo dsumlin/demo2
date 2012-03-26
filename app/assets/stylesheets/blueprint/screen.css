@@ -27,7 +27,7 @@ a img {border:none;}
 /* typography.css */
 html {font-size:100.01%;}
 body {font-size:75%;color:white;background:white;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
-h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#CC9966;}
 h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:2em;margin-bottom:0.75em;}
 h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
@@ -98,7 +98,7 @@ form.inline p {margin-bottom:0;}
 .notice {background:#fff6bf;color:#514721;border-color:red;}
 .success {background:#e6efc2;color:#264409;border-color:#c6d880;}
 .info {background:#d5edf8;color:#205791;border-color:#92cae4;}
-.error a, .alert a {color:#8a1f11;}
+.error a, .alert a, .error a:visited {color:black;}
 .notice a {color: blue;}
 .success a {color:#264409;}
 .info a {color:#205791;}
