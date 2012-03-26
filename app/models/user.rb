@@ -5,16 +5,17 @@ class User < ActiveRecord::Base
     attr_accessible :name, :email, :password, :password_confirmation
     
     has_many :microposts,  :dependent => :destroy
-    #has_many :friendships, :dependent => :destroy,
-    #                           :foreign_key => "follower_id"
-    #has_many :reverse_friendships, :dependent => destroy,
-    #                              :foreign_key => "followed_id",
-    #                              :class_name => "Friendship"
-    #
-    #has_many :following,  :through => :friendships,
-    #                     :source => :followed
-    #has_many :followers,  :through => :reverse_friendships,
-    #                     :source =>  :follower 
+    has_many :friendships, :dependent => :destroy,
+                           :foreign_key => "follower_id"
+    
+    has_many :reverse_friendships, :dependent => :destroy,
+                                   :foreign_key => "followed_id",
+                                   :class_name => "Friendship"
+    
+    has_many :following,  :through => :friendships,
+                          :source => :followed
+    has_many :followers,  :through => :reverse_friendships,
+                          :source =>  :follower 
     
     email_regex = /[\w+\-.]+@[a-z\d\-.]+\.[a-z]+/i
     
@@ -45,22 +46,22 @@ class User < ActiveRecord::Base
         
     end
     
-    #  def following?(followed)
+     def following?(followed)
         
-    #   friendships.find_by_followed_id(followed)
+   friendships.find_by_followed_id(followed)
         
-    #   end
+       end
     
-    #def follow!(followed)
+    def follow!(followed)
         
-    #   friendships.create!(:followed_id => followed.id)
+       friendships.create!(:followed_id => followed.id)
         
-    #   end
-    #def unfollow!(followed)
+       end
+    def unfollow!(followed)
     
-    #friendships.find_by_followed_id(followed).destroy
+    friendships.find_by_followed_id(followed).destroy
 
-    #   end
+       end
     
     
        class << self 
