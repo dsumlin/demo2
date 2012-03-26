@@ -5,16 +5,16 @@ class User < ActiveRecord::Base
     attr_accessible :name, :email, :password, :password_confirmation
     
     has_many :microposts,  :dependent => :destroy
-    has_many :friendships, :dependent => :destroy,
-                           :foreign_key => "follower_id"
-    has_many :reverse_friendships, :dependent => destroy,
-                                   :foreign_key => "followed_id",
-                                   :class_name => "Friendship"
-    
-    has_many :following,  :through => :friendships,
-                          :source => :followed
-    has_many :followers,  :through => :reverse_friendships,
-                          :source =>  :follower 
+    #has_many :friendships, :dependent => :destroy,
+    #                           :foreign_key => "follower_id"
+    #has_many :reverse_friendships, :dependent => destroy,
+    #                              :foreign_key => "followed_id",
+    #                              :class_name => "Friendship"
+    #
+    #has_many :following,  :through => :friendships,
+    #                     :source => :followed
+    #has_many :followers,  :through => :reverse_friendships,
+    #                     :source =>  :follower 
     
     email_regex = /[\w+\-.]+@[a-z\d\-.]+\.[a-z]+/i
     
@@ -45,21 +45,22 @@ class User < ActiveRecord::Base
         
     end
     
-    def following?(followed)
+    #  def following?(followed)
         
-        friendships.find_by_followed_id(followed)
+    #   friendships.find_by_followed_id(followed)
         
-        end
-    def follow!(followed)
-        
-        friendships.create!(:followed_id => followed.id)
-        
-        end
-    def unfollow!(followed)
+    #   end
     
-        friendships.find_by_followed_id(followed).destroy
+    #def follow!(followed)
         
-        end
+    #   friendships.create!(:followed_id => followed.id)
+        
+    #   end
+    #def unfollow!(followed)
+    
+    #friendships.find_by_followed_id(followed).destroy
+
+    #   end
     
     
        class << self 
