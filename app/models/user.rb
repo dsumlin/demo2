@@ -59,7 +59,7 @@ class User < ActiveRecord::Base
        end
     def unfollow!(followed)
     
-    friendships.find_by_followed_id(followed).destroy
+       friendships.find_by_followed_id(followed).destroy
 
        end
     
