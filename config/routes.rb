@@ -10,8 +10,10 @@ Demo2::Application.routes.draw do
   get "sessions/new"
 
     resources :users
-    resources :sessions, :only => [:new, :create, :destroy]
-    resources :microposts, :only => [:create, :destroy]
+    resources :sessions,    :only => [:new, :create, :destroy]
+    resources :microposts,  :only => [:create, :destroy]
+    resources :friendships, :only => [:create, :destroy]
+
     
   get "users/new"
 
