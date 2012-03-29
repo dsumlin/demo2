@@ -17,6 +17,14 @@ class User < ActiveRecord::Base
     has_many :followers,  :through => :reverse_friendships,
                           :source =>  :follower 
     
+    
+    has_attached_file :photo,
+    :styles => {
+    :thumb=> "100x100#",
+    :small  => "400x400>" }
+    
+    
+    
     email_regex = /[\w+\-.]+@[a-z\d\-.]+\.[a-z]+/i
     
     validates :name,        :presence => true,
