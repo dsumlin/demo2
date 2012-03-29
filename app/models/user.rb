@@ -21,7 +21,11 @@ class User < ActiveRecord::Base
     has_attached_file :photo,
     :styles => {
     :thumb=> "100x100#",
-    :small  => "400x400>" }
+    :small  => "400x400>",
+    :medium => "1500x1500"
+    }
+    
+    
     
     
     
