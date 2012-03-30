@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
     :styles => {
     :thumb=> "100x100#",
     :small  => "400x400>",
-    :medium => "1500x1500"
+    :medium => "1500x1500>"
     }
     
     
