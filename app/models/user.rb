@@ -26,7 +26,13 @@ class User < ActiveRecord::Base
     }
     
     
-    
+    has_attached_file :avatar,
+    :styles => {
+    :thumb => "75x75#",
+    :small => "100x100#",
+    :medium => "150x150>"
+    }
+
     
     
     email_regex = /[\w+\-.]+@[a-z\d\-.]+\.[a-z]+/i
