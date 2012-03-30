@@ -1,7 +1,7 @@
-<%= form_for @micropost, :html => { :multipart => true } do |f| %>
 
+<%= form_for :user, @user, :url => user_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :avatar %>
 	
-  <%= f.file_field :photo%>
 	
 	<div class="field">
 		<%= f.text_area :content %>
@@ -9,16 +9,14 @@
 	<div class="actions">
 
 	<%= f.submit "Say Something" %>
- <%= f.file_field :photo %>
 	</div>
 	
 <section>
 
 
-<%= image_tag @photo => 'medium' %>
-<%= image_tag @photo => "thumb" %>
-
- <%= f.file_field :photo %>
+<%= image_tag @user.avatar.url %>
+<%= image_tag @user.avatar.url(:medium) %>
+<%= image_tag @user.avatar.url(:thumb) %>
 
 </section>
 

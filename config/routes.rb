@@ -5,11 +5,12 @@ Demo2::Application.routes.draw do
             get :following, :followers
             end
         end
-    
+    resources :images
+    resources :avatar
     
   get "sessions/new"
   get "users/new"
-
+get "users/show"
     resources :users
     resources :sessions,    :only => [:new, :create, :destroy]
     resources :microposts,  :only => [:create, :destroy]
@@ -33,7 +34,7 @@ Demo2::Application.routes.draw do
     match '/show', :to => 'users#show'
 
     
-
+    #:action=>"show", :controller=>"users"
     
 
 
