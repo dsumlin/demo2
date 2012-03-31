@@ -1,26 +1,27 @@
 class User < ActiveRecord::Base
     
     
-    attr_accessor   :password,  :encrypt_password
-    attr_accessible :name, :email, :password, :password_confirmation
+    attr_accessor   :password, :encrypt_password
+    attr_accessible :name, :email, :password, :password_confirmation, :photo,
+    :thumb, :small, :medium
     
-    has_many :microposts,  :dependent => :destroy
-    has_many :friendships, :dependent => :destroy,
-                           :foreign_key => "follower_id"
+    has_many :microposts,           :dependent => :destroy
+    has_many :friendships,          :dependent => :destroy,
+                                    :foreign_key => "follower_id"
     
-    has_many :reverse_friendships, :dependent => :destroy,
-                                   :foreign_key => "followed_id",
-                                   :class_name => "Friendship"
+    has_many :reverse_friendships,  :dependent => :destroy,
+                                    :foreign_key => "followed_id",
+                                    :class_name => "Friendship"
     
-    has_many :following,  :through => :friendships,
-                          :source => :followed
-    has_many :followers,  :through => :reverse_friendships,
-                          :source =>  :follower 
+    has_many :following,            :through => :friendships,
+                                    :source => :followed
+    has_many :followers,            :through => :reverse_friendships,
+                                    :source =>  :follower 
     
     
     has_attached_file :photo,
     :styles => {
-    :thumb=> "100x100#",
+    :thumb => "100x100#",
     :small  => "400x400>",
     :medium => "1500x1500>"
     }
