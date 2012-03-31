@@ -1,6 +1,5 @@
 
-	<%= form_for @micropost  , :html => { :multipart => true } do |f| %>
-
+<%= form_for(@micropost) do |f| %>
 	
 	<div class="field">
 		<%= f.text_area :content %>
@@ -8,7 +7,6 @@
 	<div class="actions">
 
 	<%= f.submit "Submit" %>
-<%= f.file_field :photo %>
 	</div>
 	
 <section>

@@ -2,9 +2,7 @@ class User < ActiveRecord::Base
     
     
     attr_accessor   :password, :encrypt_password
-    attr_accessible :name, :email, :password, :password_confirmation, :photo,
-    :thumb, :small, :medium
-    
+    attr_accessible :name, :email, :password, :password_confirmation, :photo, :avatar
     has_many :microposts,           :dependent => :destroy
     has_many :friendships,          :dependent => :destroy,
                                     :foreign_key => "follower_id"
@@ -19,18 +17,7 @@ class User < ActiveRecord::Base
                                     :source =>  :follower 
     
     
-    has_attached_file :photo,
-    :styles => {
-    :thumb => "100x100#",
-    :small  => "400x400>",
-    :medium => "1500x1500>"
-    }
-    
-    
        
-    has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
-
-    
     
     email_regex = /[\w+\-.]+@[a-z\d\-.]+\.[a-z]+/i
     
