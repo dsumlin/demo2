@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20120331200430) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "blogposts", ["user_id"], :name => "index_blogposts_on_user_id"
+
   create_table "friendships", :force => true do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
@@ -52,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20120331200430) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
+<<<<<<< HEAD
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.string   "salt"
@@ -65,6 +68,13 @@ ActiveRecord::Schema.define(:version => 20120331200430) do
     t.string   "banner_content_type"
     t.integer  "banner_file_size"
     t.datetime "banner_updated_at"
+=======
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.string   "salt"
+    t.string   "encrypted_password"
+    t.boolean  "admin",              :default => false
+>>>>>>> 4bdc0e83b735153562c851a4628eebe947cfa48e
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
