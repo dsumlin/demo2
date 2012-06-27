@@ -1,5 +1,5 @@
-
-<%= form_for(@micropost) do |f| %>
+<%= form_for(@micropost, :html => {:multipart => true}) do |f| %>
+  <%= f.file_field :banner %>
 	
 	<div class="field">
 		<%= f.text_area :content %>
@@ -14,5 +14,6 @@
 
 
 <% end %>
+
 </section>
 

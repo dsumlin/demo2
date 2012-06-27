@@ -7,6 +7,8 @@ Demo2::Application.routes.draw do
         end
     resources :images
     resources :avatar
+    resources :photo
+    resources :banner
     
   get "sessions/new"
   get "users/new"
