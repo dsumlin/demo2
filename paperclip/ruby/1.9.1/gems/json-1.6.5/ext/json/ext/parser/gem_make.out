@@ -1,0 +1,5 @@
+/Volumes/dsumlin/.rvm/rubies/ruby-1.9.3-p0/bin/ruby extconf.rb 
+creating Makefile
+
+make
+sh: make: command not found
