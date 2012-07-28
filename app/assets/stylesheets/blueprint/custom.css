@@ -23,6 +23,8 @@ padding 1em;
 background: silver;
 width: 960px;
 height: 200px;
+border: 1px inset black;
+
 }
 
 section {
@@ -39,23 +41,44 @@ color: white;
 
 }
 
-section h1 {
+section h1  {
 
-color:#CC9966;
+color:turquoise;
 font-size: 200%;
+
+}
+
+section h2  {
+
+color:turquoise;
+font-size: 175%;
+
+}
+
+section h3 {
+
+color:turquoise;
+font-size: 150%;
+
+}
+
+section h4  {
+
+color:turquoise;
+font-size: 125%;
 
 }
 
 a {
 
-color: #CC9966;
+color:;
 text-decoration: none; 
 
 }
 
 a:hover {
 
-color: #CC9966;
+color:;
 
 text-decoration: underline;
 
@@ -118,8 +141,8 @@ nav ul li a:visited {
 nav ul li a:hover {
 
     text-decoration: underline;
-    color:#CC9966;
-    font-family: cursive;
+    color:;
+    font-family: comic;
 
 
 }
@@ -183,7 +206,7 @@ table.profile {
 
 width: 100%;
 padding: 1em;
-border: 1px groove #CC9966;
+border: 1px groove blue;
 background: white;
 
 
@@ -208,14 +231,14 @@ padding: 1em;
 vertical-align: top;
 background-color:black;
 color: white;
-border: 1px groove #CC9966;
+border: 1px groove blue;
 
 
 }
 
 .profile img.gravatar {
 
-border: 1px groove #CC9966;
+border: 1px groove purple;
 margin-bottom: -15px;
 
 
@@ -224,7 +247,7 @@ margin-bottom: -15px;
 
 .profile img.gravatar {
 
-border: 1px groove #CC9966;
+border: 1px groove purple;
 margin-bottom: -15px;
 
 
@@ -337,14 +360,14 @@ table.microposts tr {
 
 
 height: 70px;
-color: #CC9966;
+color: purple;
 
 }
 
 
 table.microposts tr td.gravatar {
 
-border-top: 1px solid #CC9966;
+border-top: 1px solid purple;
 vertical-align: top;
 background:black;
 width: 50px;
@@ -355,11 +378,11 @@ width: 50px;
 
 table.microposts tr td.micropost {
 
-border-top: 1px solid #CC9966;
+border-top: 1px solid blue;
 vertical-align: top;
 padding-top: 10px;
 background:black;
-border-top: 1px solid #CC9966;
+border-top: 1px solid green;
 
 
 
@@ -406,12 +429,12 @@ font-size: 80%;
 form.new_micropost {
 
 margin-bottom: 2em;
-border: 1px groove #CC9966;
+border: 1px groove purple;
 
 }
 
 form.new_micropost textarea {
-border: 1px solid #CC9966;
+border: 1px solid green;
 height: 4em;
 margin-bottom: 0;
 
@@ -465,11 +488,15 @@ margin-bottom: 0;
 
 .apple_pagination {
   background: #f1f1f1;
-  border: 1px solid #CC9966;
+  border: 1px solid blue;
   text-align: center;
   padding: 1em;
   cursor: default;
-  font-family: cursive }
+  font-family: cursive; 
+	-moz-border-radius:         10px;
+  -webkit-border-radius:      10px;
+  border-radius:              10px;
+}
   .apple_pagination a, .apple_pagination span {
     padding: 0.2em 0.3em; }
   .apple_pagination .disabled {
@@ -477,7 +504,7 @@ margin-bottom: 0;
   .apple_pagination .current {
     font-style: normal;
     font-weight: bold;
-    background-color: #bebebe;
+    background-color: black;
     display: inline-block;
     width: 1.4em;
     height: 1.4em;

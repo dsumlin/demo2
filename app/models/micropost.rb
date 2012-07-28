@@ -14,7 +14,7 @@ class Micropost < ActiveRecord::Base
     :small  => "400x400>" }
     
     
-    validates :content, :presence => true, :length => { :maximum => 100 }
+    validates :content, :presence => true, :length => { :maximum => 500}
     validates :user_id, :presence => true
 
     
