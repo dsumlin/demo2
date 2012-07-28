@@ -72,10 +72,13 @@ color: #F1E6D3;
 nav {
 
     float: right; 
-    background: black;
+    background: white;
     padding: 0 0.7em;
     white-space: nowrap;
     color: white;
+	border: 1px groove black;
+	
+	
 
 
 }
@@ -107,7 +110,7 @@ nav ul li a {
 
 nav ul li a:visited {
 
-    color: white;
+    color: black;
     
 
 }
