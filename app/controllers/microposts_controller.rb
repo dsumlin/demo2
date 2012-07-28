@@ -7,7 +7,6 @@ before_filter :authorized_user, :only => :destroy
     
     
     def create
-        @banner = current_user.microposts.build(params[:banner])
 
         @micropost = current_user.microposts.build(params[:micropost])
             if @micropost.save || @photo.save
