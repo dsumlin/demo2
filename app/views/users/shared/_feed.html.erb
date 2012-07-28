@@ -1,10 +1,14 @@
+
+
 <% if @feed_items.any? %>
+<div class="apple_pagination">
+<%= will_paginate @feed_items %>
+</div>
 	<table class="microposts" summary="Micropost">
-	
+			
 	<%= render :partial => 'users/shared/feed_item', :collection => @feed_items %>
 	
 	
 	</table>
 	
-	<%= will_paginate @feed_items %>
 	<% end %>
