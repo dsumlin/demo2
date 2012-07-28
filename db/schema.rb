@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120331200430) do
+ActiveRecord::Schema.define(:version => 20120331183147) do
 
   create_table "blogposts", :force => true do |t|
     t.string   "content"
@@ -19,47 +19,5 @@ ActiveRecord::Schema.define(:version => 20120331200430) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  create_table "friendships", :force => true do |t|
-    t.integer  "follower_id"
-    t.integer  "followed_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "friendships", ["followed_id"], :name => "index_friendships_on_followed_id"
-  add_index "friendships", ["follower_id"], :name => "index_friendships_on_follower_id"
-
-  create_table "microposts", :force => true do |t|
-    t.string   "content"
-    t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "microposts", ["user_id"], :name => "index_microposts_on_user_id"
-
-  create_table "relationships", :force => true do |t|
-    t.integer  "follower_id"
-    t.integer  "followed_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
-    t.string   "salt"
-    t.string   "encrypted_password"
-    t.boolean  "admin",               :default => false
-    t.string   "banner_file_name"
-    t.string   "banner_content_type"
-    t.integer  "banner_file_size"
-    t.datetime "banner_updated_at"
-  end
-
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end
