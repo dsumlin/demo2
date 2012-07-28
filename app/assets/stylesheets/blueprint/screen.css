@@ -96,11 +96,11 @@ form.inline p {margin-bottom:0;}
 .error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
 .error, .alert {background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
 .notice {background:#fff6bf;color:#514721;border-color:red;}
-.success {background:#e6efc2;color:#264409;border-color:#c6d880;}
+.success {background:#00FF00;color:blue;border-color:black;}
 .info {background:#d5edf8;color:#205791;border-color:#92cae4;}
 .error a, .alert a, .error a:visited {color:black;}
 .notice a {color: blue;}
-.success a {color:#264409;}
+.success a {color:blue;}
 .info a {color:#205791;}
 
 /* grid.css */
