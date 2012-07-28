@@ -1,6 +1,7 @@
 
 
 <% if @feed_items.any? %>
+
 <div class="apple_pagination">
 <%= will_paginate @feed_items %>
 </div>
@@ -10,5 +11,7 @@
 	
 	
 	</table>
-	
+	<div class="apple_pagination">
+	<%= will_paginate @feed_items %>
+	</div>
 	<% end %>

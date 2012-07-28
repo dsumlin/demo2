@@ -326,12 +326,15 @@ ul.users {
 
 margin-top: 1em;
 width:50px;
+margin-left:40%;
+
 
 }
 
 ul.users li {
 
     list-style: none;
+	width:100px;
 
 }
 
