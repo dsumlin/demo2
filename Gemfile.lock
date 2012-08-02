@@ -127,7 +127,7 @@ DEPENDENCIES
   gravatar
   gravatar_image_tag
   jquery-rails
-  paperclip (~> 3.0)
+  paperclip
   pg
   rails (= 3.2.2)
   sass-rails (~> 3.2.3)

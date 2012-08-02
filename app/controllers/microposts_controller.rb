@@ -9,7 +9,7 @@ before_filter :authorized_user, :only => :destroy
     def create
 
         @micropost = current_user.microposts.build(params[:micropost])
-            if @micropost.save || @photo.save
+            if @micropost.save || @micropost.avatar.save
                 redirect_to root_path, :flash => { :success => "Post Saved" }
             else
                 
