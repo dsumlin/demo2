@@ -10,8 +10,12 @@
 </span>
 <span class="content">
 
-<%= feed_item.content %>
-<%= image_tag @micropost.avatar.url %>
+<%= feed_item.content %><br />
+<%=image_tag feed_item.avatar.url(:thumb) %><br />
+<%= @micropost.avatar.url(:thumb) %><br />
+<%= image_tag @micropost.avatar.url(:medium) %>
+
+
 
 
 </span>
