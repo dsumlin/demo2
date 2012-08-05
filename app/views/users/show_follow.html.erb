@@ -11,6 +11,7 @@
 		<td class="sidebar round">
 	<strong >Name:</strong><br /> <%= @user.name %><br />
 	<strong >Email:</strong> <br /><%= @user.email %><br />
+	<strong >Link:</strong> <br /><%= link_to user_path(@user), @user %><br />
 	<strong >Comments:</strong> <br /><%= @user.microposts.count %>
 	<strong><%= render 'users/shared/stats' %></strong>
 	<% if @users.any? %>

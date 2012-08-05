@@ -1,19 +1,23 @@
 class User < ActiveRecord::Base
     
     
-    attr_accessor                   :password, :encrypt_password
-    attr_accessible :name, :email, :password, :password_confirmation, :banner 
-    has_many                        :microposts, :dependent => :destroy
-    has_many :friendships,          :dependent => :destroy,
-                                    :foreign_key => "follower_id"
+    attr_accessor :password, :encrypt_password
     
-    has_many :reverse_friendships,  :dependent => :destroy,
-                                    :foreign_key => "followed_id",
-                                    :class_name => "Friendship"
+    attr_accessible :name, :email, :password, :password_confirmation
     
-    has_many :following,            :through => :friendships,
+    has_many :microposts,    :dependent => :destroy
+    
+    has_many :relationships, :dependent => :destroy,
+                             :foreign_key => "follower_id"
+    
+    has_many :reverse_relationships,  :dependent => :destroy,
+                                      :foreign_key => "followed_id",
+                                      :class_name => "Relationship"
+    
+    has_many :following,            :through => :relationships,
                                     :source => :followed
-    has_many :followers,            :through => :reverse_friendships,
+                                    
+    has_many :followers,            :through => :reverse_relationships,
                                     :source =>  :follower 
     
   
@@ -51,18 +55,18 @@ class User < ActiveRecord::Base
     
      def following?(followed)
         
-   friendships.find_by_followed_id(followed)
+   relationships.find_by_followed_id(followed)
         
        end
     
     def follow!(followed)
         
-       friendships.create!(:followed_id => followed.id)
+       relationships.create!(:followed_id => followed.id)
         
        end
     def unfollow!(followed)
     
-       friendships.find_by_followed_id(followed).destroy
+       relationships.find_by_followed_id(followed).destroy
 
        end
     
