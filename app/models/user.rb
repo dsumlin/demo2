@@ -39,7 +39,6 @@ class User < ActiveRecord::Base
     
     before_save :encrypt_password
     
-    scope :admin, where(:admin => true)
     
     def has_password?(submitted_password)
         
@@ -50,7 +49,7 @@ class User < ActiveRecord::Base
     
     def feed 
         
-       microposts.followed_by(self)
+       Microposts.from_users_followed_by(self)
 
         
     end
