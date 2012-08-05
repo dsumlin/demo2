@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
     
     def feed 
         
-       Microposts.from_users_followed_by(self)
+       Micropost.from_users_followed_by(self)
 
         
     end
