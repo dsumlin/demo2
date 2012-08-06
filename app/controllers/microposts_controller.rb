@@ -5,11 +5,7 @@ before_filter :authorized_user, :only => :destroy
 
     
     
-    def show
-    
-    @feed_items = []
-    
-    end
+   
     
     
     def create

@@ -49,8 +49,8 @@ class User < ActiveRecord::Base
     
     def feed 
         
-       Micropost.from_users_followed_by(self)
-       #microposts.where("user_id = ?", id)
+       #Micropost.from_users_followed_by(self)
+       Micropost.where("user_id = ?", id)
 
         
     end
