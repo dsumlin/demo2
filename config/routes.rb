@@ -7,13 +7,14 @@ Demo2::Application.routes.draw do
         end
     resources :images
     
-    
-  get "sessions/new"
-  get "users/new"
-get "users/show"
+    get "sessions/new"
+    get "users/new"
+	get "users/show"
     resources :users
     resources :sessions,    :only => [:new, :create, :destroy]
     resources :microposts,  :only => [:create, :destroy]
+    resources :micropost,   :only => [:create, :destroy]
+
     resources :relationships, :only => [:create, :destroy]
 
     
@@ -96,5 +97,5 @@ get "users/show"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  #match ':controller(/:action(/:id))(.:format)'
 end
