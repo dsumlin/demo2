@@ -21,8 +21,7 @@ end
 def destroy
 
     @micropost.destroy
-    redirect_to root_path, :flash => { :success => "Post Gone" }
-
+    redirect_to root_path
 
     end
     

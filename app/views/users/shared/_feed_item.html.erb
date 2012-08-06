@@ -26,7 +26,7 @@ Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
 <% if current_user?(feed_item.user) %>
 <td>
 
-<%= link_to "delete", feed_item, :method => :delete,
+<%= link_to "destroy", feed_item, :action => :delete,
 								  :confirm => "sure?",
 								  :title => feed_item.content %>
 
