@@ -5,6 +5,12 @@ before_filter :authorized_user, :only => :destroy
 
     
     
+    def show
+    
+    @feed_items = []
+    
+    end
+    
     
     def create
         @micropost = current_user.microposts.build(params[:micropost])
