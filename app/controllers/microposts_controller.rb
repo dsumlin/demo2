@@ -23,7 +23,7 @@ end
 def destroy
 
     @micropost.destroy
-    redirect_to current_user
+    redirect_to root_path
 
     end
     

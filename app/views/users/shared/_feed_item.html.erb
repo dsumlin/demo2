@@ -23,11 +23,11 @@ Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
 </span>
 
 </td>
+<td class="micropost" >
 <% if current_user?(feed_item.user) %>
-<td>
 
-<%= link_to "destroy", feed_item, :method => :delete,
-								  :confirm => "sure?",
+<%= link_to "Destroy", feed_item, :method => :delete,
+								  :confirm => "Are You Positive?",
 								  :title => feed_item.content %>
 					
 								  
