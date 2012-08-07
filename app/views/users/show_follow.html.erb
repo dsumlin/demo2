@@ -1,7 +1,7 @@
 <table summary="Following Summary">
 	<tr>
 		<td class="main">
-			<h1><%= @title %></h1>
+			<h1 style="text-align:center; font-size: 3em; font-family:impact"><%= @title %></h1><br />
 			<% if @users.any? %>
 				<ul class="users">
 				 <%= render @users %>
@@ -16,7 +16,7 @@
 	<strong><%= render 'users/shared/stats' %></strong>
 	<% if @users.any? %>
 		<% @users.each do |user| %>
-			<%= link_to gravatar_for(user, :size => 30), user %>
+			<%= link_to gravatar_for(user, :size => 50), user %>
 			<% end %>
 		   <% end %>	
 	</td>

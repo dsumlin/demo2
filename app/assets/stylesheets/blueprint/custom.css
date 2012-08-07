@@ -142,7 +142,7 @@ nav ul li a:hover {
 
     text-decoration: underline;
     color:;
-    font-family: comic;
+    font-family: impact;
 
 
 }
@@ -160,6 +160,7 @@ a.signup_button {
     font-size: 150%;
     font-weight: bold;
     padding: 20px;
+    border: 1px groove blue;
 
 
 
