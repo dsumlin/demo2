@@ -4,6 +4,7 @@
 			<h1 style="text-align:center; font-size: 3em; font-family:impact"><%= @title %></h1><br />
 			<% if @users.any? %>
 				<ul class="users">
+				<%= will_paginate @users%>
 				 <%= render @users %>
 				 </ul>
 				 <% end %>
@@ -17,6 +18,7 @@
 	<% if @users.any? %>
 		<% @users.each do |user| %>
 			<%= link_to gravatar_for(user, :size => 50), user %>
+
 			<% end %>
 		   <% end %>	
 	</td>
