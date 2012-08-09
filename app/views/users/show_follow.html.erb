@@ -3,10 +3,11 @@
 		<td class="main">
 			<h1 style="text-align:center; font-size: 3em; font-family:impact"><%= @title %></h1><br />
 			<% if @users.any? %>
-				<ul class="users">			
-				<div class="apple_pagination">
+			<div class="flickr_pagination">
 					<%= will_paginate @users  %>
 				</div>	
+				<ul class="users">			
+				
 				 <%= render @users %>
 				 </ul>
 				 <% end %>

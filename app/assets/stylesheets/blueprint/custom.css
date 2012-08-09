@@ -501,6 +501,8 @@ margin-bottom: 0;
   -webkit-border-radius:      10px;
   border-radius:              10px;
 }
+
+
   .apple_pagination a, .apple_pagination span {
     padding: 0.2em 0.3em; }
   .apple_pagination .disabled {
@@ -522,6 +524,9 @@ margin-bottom: 0;
     color: black; }
     .apple_pagination a:hover, .apple_pagination a:focus {
       text-decoration: underline; }
+
+
+
 
 .flickr_pagination {
   text-align: center;
